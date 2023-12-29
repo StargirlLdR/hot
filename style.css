@@ -1,0 +1,304 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    margin: 0;
+    justify-content: center;
+    font-family: sans-serif;
+    text-align: center;
+    background-color: rgb(98, 154, 186);
+    width: 100%;
+    height: 1000px;
+    
+}
+
+header
+{   
+    width: 100%; 
+    height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    background-color: aliceblue;
+    
+}
+
+nav
+{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-between;
+    width: 70%;
+    height: 30px;
+}
+
+
+main
+{
+    background-color: rgb(98, 154, 186);
+    display: flex;
+    justify-content: center;
+}
+.figure
+{
+    width: 70%;
+    min-height: 1000px;
+    max-height: 1200px;
+    z-index: -1;
+    position: absolute;
+}
+
+.parallelogram 
+{
+    width: 350px;
+    height: 250px;
+    background-color: rgb(247, 247, 250);
+    border-top-left-radius: 20px; /* Устанавливаем радиус закругления для левого верхнего угла */
+    border-bottom-right-radius: 20px; /* Устанавливаем радиус закругления для правого нижнего угла */
+    position: relative;
+    margin-top: 120px;
+    margin-left: 135px;
+
+}
+
+.parallelogram_1 
+{
+    width: 350px;
+    height: 250px;
+    background-color: rgb(247, 247, 250);
+    border-top-left-radius: 20px; /* Устанавливаем радиус закругления для левого верхнего угла */
+    border-bottom-right-radius: 20px; /* Устанавливаем радиус закругления для правого нижнего угла */
+    position: relative;
+    margin-top: 30px;
+    margin-left: 135px;
+
+}
+
+.right-parallelogram
+{
+    position: absolute;
+    width: 350px;
+    height: 250px;
+    background-color: rgb(247, 247, 250);
+    border-top-left-radius: 20px; /* Устанавливаем радиус закругления для левого верхнего угла */
+    border-bottom-right-radius: 20px; /* Устанавливаем радиус закругления для правого нижнего угла */
+    position: relative;
+    float: right;
+    margin-right: 135px;
+    margin-top: 120px;
+
+}
+
+.right-parallelogram_1
+{
+    position: absolute;
+    width: 350px;
+    height: 250px;
+    background-color: rgb(247, 247, 250);
+    border-top-left-radius: 20px; /* Устанавливаем радиус закругления для левого верхнего угла */
+    border-bottom-right-radius: 20px; /* Устанавливаем радиус закругления для правого нижнего угла */
+    position: relative;
+    float: right;
+    margin-right: 135px;
+    margin-top: 30px;
+
+}
+
+.num
+{
+    color: rgb(98, 154, 186);
+    font-size: 44px;
+    font-weight: 700;
+    font-family: 'Kanit', sans-serif;
+}
+.txt
+{
+    font-style: italic;
+    color: #807e7e;
+    font-size: 20px;
+    margin-top: 10px;
+    line-height: 30px;
+}
+.main_img
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.background
+{
+    position: absolute;
+    width: 1000px;
+    height: 1000px;
+    margin-top: 60px;
+    z-index: -1;
+    justify-content: space-around;
+}
+
+footer
+{
+    position:relative;
+    background-color: #333333;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    margin-top: 1050px;
+    position: relative;
+}
+.footer-txt
+{
+    width: 60%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    color: white;
+    
+}
+
+.ft
+{
+    text-align: center;
+    height: auto;
+    font-size: 17px;
+}
+
+.s
+{
+    margin-top: 80px;
+}
+
+
+  
+  
+  
+  @media (max-width: 600px) {
+    header, nav, .figure, .parallelogram, .parallelogram_1, .right-parallelogram, .right-parallelogram_1, .background, .footer-txt {
+      width: 100%;
+      height: auto;
+      margin: 0;
+      padding: 0;
+    }
+    
+    nav {
+      flex-direction: row;
+      justify-content: center;
+    }
+    
+    .parallelogram, .parallelogram_1, .right-parallelogram, .right-parallelogram_1 {
+      width: 90%;
+      margin: 20px auto;
+    }
+    
+    .right-parallelogram, .right-parallelogram_1 {
+      float: none;
+      margin: 20px auto;
+    }
+    
+    .main_img {
+      flex-direction: column;
+    }
+    
+    
+    
+    .footer-txt {
+      width: 90%;
+    }
+  }
+  @media (max-width: 768px) {
+    header,
+    nav,
+    .figure,
+    .parallelogram,
+    .parallelogram_1,
+    .right-parallelogram,
+    .right-parallelogram_1,
+    
+    .footer-txt {
+      width: 100%;
+    }
+  
+    nav {
+      height: auto;
+      flex-direction: row;
+    }
+  
+    .parallelogram,
+    .parallelogram_1,
+    .right-parallelogram,
+    .right-parallelogram_1 {
+      width: calc(100% - 270px); /* Вычисляем ширину, исходя из отступов */
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    .right-parallelogram,
+    .right-parallelogram_1 {
+      float: none;
+    }
+  
+    .main_img {
+      flex-direction: column;
+    }
+  
+    
+    .footer-txt {
+      width: 80%;
+    }
+  
+    .background {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header,
+    nav,
+    .figure,
+    .parallelogram,
+    .parallelogram_1,
+    .right-parallelogram,
+    .right-parallelogram_1,
+    .footer-txt {
+      width: 100%;
+    }
+  
+    .parallelogram,
+    .parallelogram_1,
+    .right-parallelogram,
+    .right-parallelogram_1 {
+      width: calc(100% - 50px); /* Уменьшаем отступы для мобильных */
+      margin-top: 20px;
+    }
+  
+    .num {
+      font-size: 24px; /* Уменьшаем размер шрифта для мобильных */
+    }
+  
+    .txt {
+      font-size: 14px; /* Уменьшаем размер шрифта для текстовых элементов */
+    }
+  
+  
+    .footer-txt {
+      width: 90%;
+    }
+  
+    .background {
+      width: 100%;
+      height: auto;
+    }
+  }
